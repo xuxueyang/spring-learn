@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+        <bean id="demo1" class="com.ioc.demo.demo1.UserServiceImpl">
+            <property name="name" value="123"></property>
+        </bean>
+
+        <!-- bean的三种实例化方法 -->
+        <bean id="bean1" class="com.ioc.demo.demo2.Bean1"></bean>
+        <!-- 使用bean2的工程 -->
+        <bean id="bean2" class="com.ioc.demo.demo2.Bean2Factory" factory-method="createBean2"></bean>
+        <!--使用bean3的实例工厂-->
+        <bean id="bean3factory" class="com.ioc.demo.demo2.Bean3Factory" />
+        <bean id="bean3" factory-bean="bean3factory" factory-method="createBean3" />
+        <!--Bean的作用于 singleton(默认） prototype request(WebApplicationContext) session-->
+        <!--init-method destory-method(singletion)(application.close()) -->
+        <bean class="com.ioc.demo.demo2.MyBeanPostProcessor" />
+</beans>
