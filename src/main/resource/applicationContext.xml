@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:p="http://www.springframework.org/schema/p"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
@@ -17,4 +18,46 @@
         <!--Bean的作用于 singleton(默认） prototype request(WebApplicationContext) session-->
         <!--init-method destory-method(singletion)(application.close()) -->
         <bean class="com.ioc.demo.demo2.MyBeanPostProcessor" />
+
+        <!--property是通过getter和setter注入的-->
+        <bean id="user" class="com.ioc.demo.demo3.User">
+                <constructor-arg name="name" value="xxy" />
+                <constructor-arg name="age" value="18" />
+        </bean>
+        <!--<bean id="user2" class="com.ioc.demo.demo3.User2">-->
+                <!--<property name="name" value="xxy" />-->
+                <!--<property name="age" value="18" />-->
+                <!--<property name="cat" ref="cat" />-->
+        <!--</bean>-->
+        <!--<bean id="cat" class="com.ioc.demo.demo3.Cat">-->
+                <!--<property name="name" value="Tiamo" />-->
+        <!--</bean>-->
+        <!--p名称空间注入-->
+        <!--p:<属性名>-ref-->
+        <bean id="user2" class="com.ioc.demo.demo3.User2" p:name="xxy22" p:cat-ref="cat">
+                <property name="age" value="22" />
+        </bean>
+        <bean id="cat" class="com.ioc.demo.demo3.Cat" p:name="测试">
+        </bean>
+        <!--SpEL注入：spring expression language spring表达式语言-->
+        <!--#{} #{T{java.lang.Math}.PI}-->
+        <!--复杂类型的属性注入-->
+        <bean id="collectionBean" class="com.ioc.demo.demo3.CollectionBean">
+                <property name="list">
+                        <list>
+                                <value>123</value>
+                                <value>341</value>
+                        </list>
+                </property>
+                <property name="map">
+                        <map>
+                              <entry key="aa" value="12" />
+                        </map>
+                </property>
+                <property name="property">
+                        <props>
+                                <prop key="aa" >123</prop>
+                        </props>
+                </property>
+        </bean>
 </beans>
