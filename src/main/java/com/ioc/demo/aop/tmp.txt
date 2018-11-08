@@ -57,9 +57,10 @@ AnnotationAwareAspectJAutoProxyCreator 基于bean中的AspectJ注解进行自动
 
 
 
+@Pointcut为切面命名
 
-
-
+切点方法
+private void 无参方法，方法名为切点名
 
 
 
