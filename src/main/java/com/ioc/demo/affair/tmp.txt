@@ -1,0 +1,32 @@
+
+//导入执行数据库
+muysql -uroot -proot < c:\订单\订单.sql
+
+ACID：原子性、一致性、隔离性、持久性
+
+mysql只有使用Innodb引擎的才支持事务、show engines;
+default-storage-engine = Innodb --my.ini 修改默认引擎
+
+//开启事务(START TRANSACTION)
+BEGIN
+COMMIT
+ROLLBACK
+
+//事务并发问题
+
+脏读（读永久）
+不可重复读（锁行）
+幻读（锁表）
+
+mysql 事务隔离级别
+
+read-uncommited
+read-cimmited
+repeatable-read
+serializable
+
+select @@tx_isolation
+set session transcation isolate level XXX
+
+
+setTranscationIsolation

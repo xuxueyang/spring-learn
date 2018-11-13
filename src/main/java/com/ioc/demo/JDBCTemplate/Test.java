@@ -3,6 +3,7 @@ package com.ioc.demo.JDBCTemplate;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.jdbc.core.JdbcTemplate;
+import org.springframework.jdbc.core.RowMapper;
 
 public class Test {
     private JdbcTemplate jdbcTemplate;
@@ -18,5 +19,6 @@ public class Test {
 //        jdbcTemplate.update
         String sql = "insert into students(name,sex) value(?,?)";
         jdbcTemplate.update(sql,new Object[]{"1","main"});
+//        RowMapper
     }
 }
