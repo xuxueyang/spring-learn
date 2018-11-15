@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd"
+        >
+<configuration>
+    <!--加入DB配置文件-->
+    <properties resource="dbconfig.properties"></properties>
+    <!--假如配置选项-->
+    <settings>
+        <setting name="mapUnderscoreToCame1Case" value="true" />
+        <setting name="jdbcTypeForNull" value="NULL" />
+        <setting name="lazyLoadingEnabled" value="true" />
+        <setting name="aggressiveLazyLoading" value="false" />
+    </settings>
+    <typeAliases>
+        <package name="com.mybatis.demo" />
+    </typeAliases>
+
+    <environments default="dev_mysql">
+        <environment id="dev_mysql">
+            <transactionManager type="JDBC"></transactionManager>
+            <dataSource type="POOLED">
+                <property name="driver" value="${jdbc.driver}" />
+                <property name="url" value="${jdbc.driver}" />
+                <property name="username" value="${jdbc.username}" />
+                <property name="password" value="${jdbc.password}" />
+            </dataSource>
+        </environment>
+    </environments>
+    <databaseIdProvider type="DB_VENDOR">
+        <property name="Mysql" value="mysql" />
+    </databaseIdProvider>
+
+    <mappers>
+        <mapper resource="mybatis/PersonMapper.xml" />
+    </mappers>
+</configuration>

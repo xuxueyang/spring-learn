@@ -30,3 +30,28 @@ set session transcation isolate level XXX
 
 
 setTranscationIsolation
+
+//Spring事物级别
+PlatformTransactionManager
+{
+    DataSourceTransactionManager
+    JpaTransactionManager
+    HibernateTransactionManager
+
+}
+TransactionDefinition
+TransactionStatus
+
+
+Spring事物传播行为
+{
+    propagetion_required
+    PROPAGETION_NESTED
+}
+
+propagetionBehaviorName
+
+transactionTemplate.execute()
+
+//基于tx命名空间
+//基于@Transactional
