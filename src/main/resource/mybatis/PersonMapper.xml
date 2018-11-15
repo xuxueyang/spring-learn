@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<mapper namespace="com.mybatis.demo.PersonMapper" >
+
+    <resultMap id="BaseResultMap" type="com.XX.Person">
+        <id column="id" property="id" jdbcType="INTEGER" />
+    </resultMap>
+    <delete id="deletePerson" parameterType="int">
+        delete from person where id=#{id}
+    </delete>
+    <select id="getPersonByIds" returnType="person">
+        select * from person where id in
+        <foreach collection="array" item="id" index="indext" open="(" close=")" separator=",">
+            #{id}
+        </foreach>
+    </select>
+
+</mapper>

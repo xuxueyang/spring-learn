@@ -1,0 +1,11 @@
+<!--pageHelper-->
+
+<!--传入参数-->
+<div>
+    JavaBean传递(这里可以使用参数名字了，不然多个，默认是param1,param2等等）
+    Map接口（#{key})
+    注解@param
+</div>
+<!--默认参数转为paramXXX或者#{0}-->
+
+<!--collection[0]获取数值或者list[0]-->
