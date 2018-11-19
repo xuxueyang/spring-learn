@@ -9,3 +9,9 @@
 <!--默认参数转为paramXXX或者#{0}-->
 
 <!--collection[0]获取数值或者list[0]-->
+
+<!--myBatis批量数据操作-->
+<!--传统JDBC操作-->
+<div>
+
+</div>
