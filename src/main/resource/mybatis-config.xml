@@ -17,6 +17,12 @@
         <package name="com.mybatis.demo" />
     </typeAliases>
 
+    <plugins>
+        <plugin interceptor="com.mybatis.demo.MyFirstInterceptor">
+            <property name="" value="" />
+        </plugin>
+    </plugins>
+    
     <environments default="dev_mysql">
         <environment id="dev_mysql">
             <transactionManager type="JDBC"></transactionManager>
