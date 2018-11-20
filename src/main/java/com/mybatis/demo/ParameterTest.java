@@ -10,6 +10,7 @@ import java.io.Reader;
 
 public class ParameterTest {
     public static SqlSessionFactory sqlSessionFactory = null;
+//    QueryRunner queryRunner = new  QueryR
     public static SqlSessionFactory getSqlSessionFactory(){
         if(sqlSessionFactory==null){
             String resource = "mybatis-config.xml";

@@ -21,6 +21,9 @@
         <plugin interceptor="com.mybatis.demo.MyFirstInterceptor">
             <property name="" value="" />
         </plugin>
+        <plugin interceptor="com.github.pagehelper.PageInterceptor" >
+
+        </plugin>
     </plugins>
     
     <environments default="dev_mysql">

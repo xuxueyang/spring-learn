@@ -29,3 +29,10 @@ mysql分页:limit 10,10 /*第二页*/
 
 </div>
 <!--PageHelper-->
+<div>
+
+Page<Object> page = PageHelper.startPage(pageNum,pageSize);//过滤executor方法
+
+PageInfo pageInfo = new PageInfo(persons,navigatePages:1);//查看是不是第一页
+
+</div>

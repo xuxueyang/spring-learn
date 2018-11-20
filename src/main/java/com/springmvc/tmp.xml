@@ -1,0 +1,14 @@
+
+<div>
+    <!--Spring核心组件-->
+    DispatcherServlet:前置控制器
+    Handler
+    HandlerMapping
+    HandlerInterceptor
+    HandlerExecutionChain
+    HandlerAdapter
+
+    ModelAndView
+    ViewResolver
+
+</div>
