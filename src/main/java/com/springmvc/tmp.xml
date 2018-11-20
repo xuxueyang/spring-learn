@@ -12,3 +12,9 @@
     ViewResolver
 
 </div>
+<div>
+<!--使用-->
+1.基础配置
+2.XML配置controller，HandlerMaping组件映射
+3.XML配置viewresolver组件映射
+</div>
