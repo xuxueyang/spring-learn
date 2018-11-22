@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="ioc:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <root id="archive" name="ioc.war">
+      <element id="artifact" artifact-name="ioc:war exploded" />
+    </root>
+  </artifact>
+</component>
