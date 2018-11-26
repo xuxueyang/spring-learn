@@ -1,0 +1,7 @@
+debug: true
+logging:
+  level:
+    root: info
+  file: e:/myspringboot.log
+
+#datasource:

@@ -18,3 +18,35 @@
 2.XML配置controller，HandlerMaping组件映射
 3.XML配置viewresolver组件映射
 </div>
+<div>
+<!--spring mvc 数据绑定-->
+HandlerAdapt=>HttpMessageConverter=>(DataBind)Handler
+@RequestParam(value="id",required=false)
+@RequestBody和@ResponseBody是对JSON的解析
+
+</div>
+<div>
+<!--RESTful风格-->
+资源和URI
+资源的表述
+状态转移
+
+特点：
+    1.统一了客户端访问资源的接口
+    2.uri更加简洁，易于理解，便于拓展
+    3.有利于不同系统之间的资源共享
+
+return "redirect:/getAll"
+</div>
+<!--Spring拦截器-->
+<div>
+springmvc的核心servlet
+1.[servlet-name]-servlet.xml读取
+2.改变命名空间：<init-param><param-name>namespace</param-name><param-value>imocmvc </param-value></init-param>
+3.通过contextCongfigLocation配置
+
+
+拦截器是使用JDK动态代理实现的，拦截的是对应调用方法的拦截
+preHandler=>handler=>postHandler=>render=>afterCompletion(所有拦截器之后再执行）
+过滤器是Filter实现的，拦截的是request对象
+</div>
